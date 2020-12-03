@@ -157,3 +157,11 @@ body {
     width: 30%;
     text-align: center;
 }
+
+//==========================
+// GLOBAL LINK STYLES
+//==========================
+a:link,
+a:visited {
+  color: currentColor;
+}

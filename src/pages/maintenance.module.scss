@@ -1,0 +1,21 @@
+//==========================
+// MAINTENANCE PAGE
+//==========================
+.maintenance {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/maintenance-medium.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.textbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-white);
+}
