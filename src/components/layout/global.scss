@@ -132,6 +132,7 @@ body {
 .paragraph {
     font-size: 1.6rem;
     font-weight: 400;
+    line-height: 1.5;
 
     &:not(:last-child) {
         margin-bottom: 1.5rem;
@@ -146,4 +147,13 @@ body {
   padding: 0 3rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.horizontal-break {
+    display: inline-block;
+    border: none;
+    background-color: var(--color-primary);
+    height: 3px;
+    width: 30%;
+    text-align: center;
 }

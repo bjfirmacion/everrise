@@ -1,0 +1,34 @@
+//==========================
+// ABOUT SECTION
+//==========================
+
+.section {
+  padding: 10rem 0 5rem 0;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textbox {
+  width: 40%;
+  margin-top: 3rem;
+}
+
+.paragraph {
+  color: --var(color-grey-dark);
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.imgContainer {
+  width: 50%;
+}
+
+.img {
+  width: 100%;
+}
