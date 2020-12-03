@@ -1,0 +1,25 @@
+//==========================
+// HEADER
+//==========================
+.header {
+  height: 95vh;
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(./img/hero-cropped.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.textbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-white);
+}
+
+.btn {
+  margin-top: 3rem;
+}

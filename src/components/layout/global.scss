@@ -1,0 +1,149 @@
+//==========================
+// IMPORTS
+//==========================
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap");
+
+//==========================
+// VARIABLES
+//==========================
+:root {
+  // ****** COLORS ******
+  --color-primary: #0071e3;
+  --color-primary-light: #0077ed;
+  --color-primary-dark: #0065ca;
+
+  --color-red: red;
+
+  --color-grey-dark: #333;
+  --color-grey-medium: #777;
+  --color-grey-light: #f4f4f4;
+
+  --color-cream-light: #fcfcf5;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-icon-facebook: #3b5998;
+  --color-icon-instagram: #e4405f;
+  --color-icon-twitter: #55acee;
+  --color-icon-linkedin: #0077b5;
+
+  // ****** OTHER VARIABLES ******
+  --default-font-size: 1.6rem;
+}
+
+//==========================
+// GLOBAL RESETS
+//==========================
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // sets 1rem = 10px
+  box-sizing: border-box;
+}
+
+//==========================
+// GLOBAL TYPOGRAPHY
+//==========================
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--color-grey-dark);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.6rem;
+
+    }
+}
+
+.heading-secondary {
+    backface-visibility: hidden;
+    color: var(--color-grey-medium);
+
+    &--main {
+        display: inline-block;
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        line-height: 1;
+
+    }
+
+    &--sub {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.125rem;
+        margin-top: 1.5rem;
+    }
+}
+
+.heading-tertiary {
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        letter-spacing: 0.2rem;
+        line-height: 1.1;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 0.125rem;
+        margin-top: 1rem;
+    }
+}
+
+.heading-4 {
+    backface-visibility: hidden;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+//==========================
+// GLOBAL LAYOUT STYLES
+//==========================
+.container {
+  max-width: 1280px;
+  padding: 0 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}

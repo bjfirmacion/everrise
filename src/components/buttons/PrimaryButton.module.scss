@@ -1,0 +1,35 @@
+//==========================
+// PRIMARY BUTTON
+//==========================
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: var(--default-font-size);
+    font-weight: 400;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1.5rem 3rem;
+    border-radius: 1px;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    transition: all 0.1s;
+
+    //Reset styles for <button> elemets:
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: var(--color-primary-dark);
+  }
+
+  &:hover {
+    background-color: var(--color-primary-light);
+  }
+}
