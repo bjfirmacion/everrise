@@ -1,0 +1,93 @@
+//==========================
+// FOOTER
+//==========================
+@import "../scss/mixins";
+
+.footer {
+  padding: 3rem 3rem 6rem 3rem;
+  background-color: var(--color-grey-dark);
+  color: var(--color-grey-light);
+  position: relative;
+
+  @include respond(phone) {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--color-grey-light);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.item {
+  display: inline-block;
+
+  &:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+
+  &--social:not(:last-of-type) {
+    margin-right: 4rem;
+  }
+}
+
+.nav {
+  a:hover,
+  a:active {
+    color: var(--color-primary);
+  }
+}
+
+.social-links {
+  @include respond(phone) {
+    margin-top: 1.5rem;
+  }
+
+  .facebook {
+    font-size: 2rem;
+    &:hover {
+      color: var(--color-icon-facebook);
+    }
+  }
+
+  .linkedin {
+    font-size: 2rem;
+    &:hover {
+      color: var(--color-icon-facebook);
+    }
+  }
+}
+
+.copyright {
+  margin-top: 3rem;
+
+  @include respond(phone) {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

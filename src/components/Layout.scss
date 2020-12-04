@@ -53,90 +53,91 @@ html {
 //==========================
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: var(--default-font-size);
+  line-height: 1.5;
+  word-spacing: 1.5px;
   color: var(--color-grey-dark);
 }
 
 .heading-primary {
-    text-transform: uppercase;
-    backface-visibility: hidden;
+  text-transform: uppercase;
+  backface-visibility: hidden;
 
-    &--main {
-        display: block;
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: 0.5rem;
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+  }
 
-    }
-
-    &--sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 500;
-        letter-spacing: 0.6rem;
-
-    }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.6rem;
+  }
 }
 
 .heading-secondary {
-    backface-visibility: hidden;
-    color: var(--color-grey-medium);
+  backface-visibility: hidden;
+  color: var(--color-grey-medium);
 
-    &--main {
-        display: inline-block;
-        font-size: 3.5rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        line-height: 1;
+  &--main {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+  }
 
-    }
-
-    &--sub {
-        display: inline-block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 0.125rem;
-        margin-top: 1.5rem;
-    }
+  &--sub {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .heading-tertiary {
-    backface-visibility: hidden;
+  backface-visibility: hidden;
 
-    &--main {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-transform: capitalize;
-        letter-spacing: 0.2rem;
-        line-height: 1.1;
-    }
+  &--main {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    line-height: 1.1;
+  }
 
-    &--sub {
-        display: block;
-        font-size: 1.8rem;
-        font-weight: 700;
-        letter-spacing: 0.125rem;
-        margin-top: 1rem;
-    }
-}
-
-.heading-4 {
-    backface-visibility: hidden;
+  &--sub {
     display: block;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.125rem;
+    margin-top: 1rem;
+  }
+}
+
+.heading-4 {
+  backface-visibility: hidden;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
 }
 
 .paragraph {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.5;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
 
-    &:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 //==========================
@@ -150,12 +151,12 @@ body {
 }
 
 .horizontal-break {
-    display: inline-block;
-    border: none;
-    background-color: var(--color-primary);
-    height: 3px;
-    width: 30%;
-    text-align: center;
+  display: inline-block;
+  border: none;
+  background-color: var(--color-primary);
+  height: 3px;
+  width: 30%;
+  text-align: center;
 }
 
 //==========================
