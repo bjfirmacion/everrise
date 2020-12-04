@@ -9,5 +9,11 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-material-ui`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        duration: 500 
+      }
+    },
   ],
 }

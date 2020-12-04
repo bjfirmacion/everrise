@@ -6,7 +6,7 @@ import aboutImg from './img/about.png';
 
 function About() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="about">
       <div className={`container`}>
         <div className={styles.about}>
           <div className={styles.textbox}>
