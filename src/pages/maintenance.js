@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'gatsby';
-import Layout from '../components/layout/Layout';
-import TextButton from '../components/buttons/TextButton';
+import Layout from '../components/Layout';
+import TextButton from '../components/TextButton';
 import styles from './maintenance.module.scss';
 
 export default function Maintenance() {

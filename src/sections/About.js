@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import TextButton from '../buttons/TextButton';
+import TextButton from '../components/TextButton';
 import styles from './About.module.scss';
 import aboutImg from './img/about.png';
 

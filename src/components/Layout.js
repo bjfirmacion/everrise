@@ -1,5 +1,5 @@
 import React from 'react';
-import './global.scss';
+import './Layout.scss';
 
 function Layout({ children }) {
   return (
