@@ -3,13 +3,6 @@ import styles from './Footer.module.scss';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-const iconStyles = {
-  largeIcon: {
-    width: 60,
-    height: 60,
-  },
-};
-
 function Footer() {
   return (
     <footer className={styles.footer}>
@@ -27,7 +20,7 @@ function Footer() {
           <ul className={styles.list}>
             <li className={`${styles.item} ${styles.itemSocial}`}>
               <a href="https://www.facebook.com/everriseconstruction" target="_blank" rel="noopener noreferrer">
-                <FacebookIcon className={styles.facebook} iconStyle={iconStyles.largeIcon} />
+                <FacebookIcon className={styles.facebook} />
               </a>
             </li>
             <li className={`${styles.item} ${styles.itemSocial}`}>

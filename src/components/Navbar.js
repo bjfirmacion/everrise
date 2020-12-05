@@ -72,7 +72,7 @@ export default class Navbar extends Component {
               </div>
             </li>
             <li className={styles.item}><Link to="/maintenance" className={styles.link}>News & insights</Link></li>
-            <li className={styles.item}><Link to="/maintenance" className={styles.link}>Careers</Link></li>
+            <li className={styles.item}><Link to="/careers" className={styles.link}>Careers</Link></li>
           </ul>
         </div>
       </nav>

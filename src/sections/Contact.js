@@ -1,0 +1,97 @@
+import React, { Component } from 'react';
+import PrimaryButton from '../components/PrimaryButton';
+import styles from './Contact.module.scss';
+
+export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(evt) {
+    this.setState({ [evt.target.name]: evt.target.value });
+  }
+
+  handleSubmit(evt) {
+    evt.preventDefault();
+  }
+
+  render() {
+    const { name, email, phone, message } = this.state;
+
+    return (
+      <section className={styles.contact} id="contact">
+        <div className="container">
+          <div className="container">
+            <h2 className="heading-secondary heading-secondary--main form__header">
+              We'd love to hear from you<br />
+              <hr className="horizontal-break" />
+            </h2>
+          </div>
+          <form method="POST" className={styles.form} onSubmit={this.handleSubmit}>
+            <div className={styles.group}>
+              <input
+                type="text"
+                className={styles.input}
+                placeholder="Full name"
+                id="name" name="name"
+                value={name}
+                required
+                onChange={this.handleChange}
+              />
+              <label htmlFor="name" className={styles.label}>Full name</label>
+            </div>
+
+            <div className={styles.group}>
+              <input
+                type="email"
+                className={styles.input}
+                placeholder="E-mail address"
+                id="email"
+                name="email"
+                value={email}
+                required
+                onChange={this.handleChange}
+              />
+              <label htmlFor="email" className={styles.label}>E-mail address</label>
+            </div>
+
+            <div className={styles.group}>
+              <input
+                type="number"
+                className={styles.input}
+                placeholder="Phone number (optional)"
+                id="phone"
+                name="phone"
+                value={phone}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="phone" className={styles.label}>Phone number</label>
+            </div>
+
+            <div className={styles.group}>
+              <textarea
+                className={`${styles.input} ${styles.inputTextarea}`}
+                name="message"
+                id="message"
+                placeholder="Leave us a message"
+                value={message}
+                onChange={this.handleChange}
+              />
+            </div>
+
+            <div className={`${styles.group} ${styles.groupSubmit}`}>
+              <PrimaryButton type="submit">Submit</PrimaryButton>
+            </div>
+          </form>
+        </div>
+      </section>
+    )
+  }
+}

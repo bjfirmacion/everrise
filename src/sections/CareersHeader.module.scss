@@ -1,0 +1,28 @@
+//==========================
+// CAREERS HEADER SECTION
+//==========================
+@import "../scss/mixins";
+
+.header {
+  height: 600px;
+  padding: 0 3rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/careers-hero-large.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+}
+
+.careers-body {
+  height: 650px;
+  width: 100%;
+  padding: 12rem 0;
+  text-align: center;
+}

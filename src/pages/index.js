@@ -4,6 +4,7 @@ import Header from '../sections/Header';
 import About from '../sections/About';
 import Products from '../sections/Products';
 import Work from '../sections/Work';
+import Contact from '../sections/Contact';
 import styles from './index.module.scss';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Products />
       <Work />
       <div className={`${styles.parallax} ${styles.parallaxB}`} />
+      <Contact />
     </Layout>
   )
 }

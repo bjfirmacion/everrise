@@ -11,6 +11,12 @@
   background-position: top;
   background-attachment: fixed;
   overflow: hidden;
+
+  a,
+  a:link,
+  a:visited {
+    color: var(--color-white);
+  }
 }
 
 .textbox {
