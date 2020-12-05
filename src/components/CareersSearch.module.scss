@@ -1,0 +1,48 @@
+//==========================
+// CAREERS SEARCH
+//==========================
+@import "../scss/mixins";
+
+.search {
+  width: 100%;
+  max-width: 76.5rem;
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.search-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  input,
+  select {
+    font-size: var(--default-font-size);
+    font-family: inherit;
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 2px;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid var(--color-primary);
+    }
+  }
+}
+
+.search-box {
+  flex: 3 1 auto;
+  margin-right: 2rem;
+
+  &::placeholder {
+    color: var(--color-white);
+  }
+}
+
+.category-dropdown {
+  flex: 1 1 auto;
+}
