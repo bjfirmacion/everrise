@@ -2,6 +2,7 @@ import React from "react";
 import Layout from '../components/Layout';
 import Header from '../sections/Header';
 import About from '../sections/About';
+import Products from '../sections/Products';
 import styles from './index.module.scss';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <Header />
       <About />
       <div className={`${styles.parallax} ${styles.parallaxA}`} />
-      <About />
+      <Products />
       <div className={`${styles.parallax} ${styles.parallaxB}`} />
     </Layout>
   )

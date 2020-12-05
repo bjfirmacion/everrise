@@ -1,0 +1,98 @@
+//==========================
+// PRODUCT CARD
+//==========================
+@import "../scss/mixins";
+
+.card {
+  width: 30%;
+  background-color: var(--color-white);
+  border-radius: 3px;
+  box-shadow: var(--shadow-1);
+  text-align: center;
+  overflow: hidden;
+
+  @include respond(tab-land) {
+    width: 32%;
+  }
+
+  @include respond(small-tab) {
+    width: 45rem;
+    margin-bottom: 4rem;
+  }
+
+  @include respond(phone) {
+    width: 95%;
+  }
+
+  &:hover .header-img {
+    filter: brightness(60%) grayscale(20%) blur(2px);
+    transform: scale(1.1);
+  }
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 25rem;
+}
+
+.header-img {
+  backface-visibility: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(70%) grayscale(20%);
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.header-text {
+  position: relative;
+  padding: 5rem 1.5rem;
+  margin-bottom: 3rem;
+  color: white;
+
+  @include respond(tab-land) {
+    padding: 3rem 1.5rem;
+    margin-bottom: 0;
+  }
+
+  @include respond(small-tab) {
+    margin-top: 2.5rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 1.75rem;
+  }
+}
+
+.icon {
+  color: var(--color-white);
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.body {
+  height: 27.5rem;
+  padding: 3rem;
+
+  @include respond(small-tab) {
+    height: auto;
+    margin-bottom: 3rem;
+  }
+
+  h4 {
+    color: var(--color-primary-dark);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: var(--color-grey-medium);
+  }
+
+  @include respond(tab-land) {
+    padding: 1.5rem;
+  }
+}

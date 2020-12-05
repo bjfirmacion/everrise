@@ -1,0 +1,19 @@
+//==========================
+// PRODUCTS SECTION
+//==========================
+@import "../scss/mixins";
+
+.products {
+  padding: 10rem 0;
+  align-items: center;
+  background-color: var(--color-grey-light);
+
+  h2 {
+    display: block;
+    text-align: center;
+  }
+
+  @include respond(small-tab) {
+    padding: 6rem 0;
+  }
+}
