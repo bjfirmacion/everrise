@@ -1,0 +1,96 @@
+//==========================
+// PRODUCTS SECTION
+//==========================
+@import "../scss/mixins";
+
+.work {
+  padding: 10rem 0;
+  background-color: var(--color-white);
+  text-align: center;
+
+  @include respond(small-tab) {
+    padding: 6rem 0;
+  }
+}
+
+.grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.tile {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  a:link,
+  a:visited {
+    color: var(--color-white);
+  }
+
+  @include respond(phone) {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.img {
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.link {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+  opacity: 0;
+  transition: all 0.3s;
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+
+  @include respond(small-tab) {
+    font-size: 1.75rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.tile:hover,
+.tile:active {
+  & .img {
+    filter: brightness(70%) grayscale(50%) blur(2px);
+  }
+
+  & .link {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+
+    &:hover,
+    &:active {
+      border-bottom: 2px solid var(--color-primary);
+    }
+  }
+}

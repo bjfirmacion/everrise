@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Header from '../sections/Header';
 import About from '../sections/About';
 import Products from '../sections/Products';
+import Work from '../sections/Work';
 import styles from './index.module.scss';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <div className={`${styles.parallax} ${styles.parallaxA}`} />
       <Products />
+      <Work />
       <div className={`${styles.parallax} ${styles.parallaxB}`} />
     </Layout>
   )

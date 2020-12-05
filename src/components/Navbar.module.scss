@@ -25,7 +25,8 @@
     }
   }
 
-  & a {
+  a:link,
+  a:visited {
     color: var(--color-grey-light);
     text-decoration: none;
     margin-top: -0.5rem;
