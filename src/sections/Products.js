@@ -1,5 +1,7 @@
 import React from 'react';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import ProductCard from '../components/ProductCard';
+import PrimaryButton from '../components/PrimaryButton';
 import styles from './Products.module.scss';
 import img1 from './img/card-img-1.jpg';
 import img2 from './img/card-img-2.jpg';
@@ -16,7 +18,7 @@ function Products() {
         </h2>
       </div>
 
-      <div className="container">
+      <div className={`container ${styles.cards}`}>
         <ProductCard
           heading="Construction, engineering & procurement"
           subheading="Promoting a seamless end-to-end experience"
@@ -47,8 +49,10 @@ function Products() {
           link="/maintenance"
         />
       </div>
-      <div className="u-container u-center-text">
-        <a href="#contact-form" className="btn btn--color-primary btn--animate">Contact us</a>
+      <div className={`container ${styles.container}`}>
+        <AnchorLink to="/#contact" title="Contact Form">
+          <PrimaryButton>Contact Us</PrimaryButton>
+        </AnchorLink>
       </div>
     </section>
   )

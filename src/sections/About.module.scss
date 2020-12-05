@@ -1,6 +1,7 @@
 //==========================
 // ABOUT SECTION
 //==========================
+@import "../scss/mixins";
 
 .section {
   padding: 10rem 0 5rem 0;
@@ -11,11 +12,19 @@
 .about {
   display: flex;
   justify-content: space-between;
+
+  @include respond(small-tab) {
+    flex-direction: column;
+  }
 }
 
 .textbox {
   width: 40%;
   margin-top: 3rem;
+
+  @include respond(small-tab) {
+    width: 100%;
+  }
 }
 
 .paragraph {
@@ -23,10 +32,26 @@
   font-size: 1.8rem;
   margin-top: 2rem;
   margin-bottom: 4rem;
+
+  @include respond(small-tab) {
+    margin-bottom: 2rem;
+  }
 }
 
 .imgContainer {
   width: 50%;
+
+  @include respond(small-tab) {
+    align-self: flex-end;
+    margin-top: -5rem;
+    margin-right: 8rem;
+  }
+
+  @include respond(phone) {
+    align-self: flex-end;
+    margin-top: -5rem;
+    margin-right: 2rem;
+  }
 }
 
 .img {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import styles from './Header.module.scss';
 import PrimaryButton from '../components/PrimaryButton';
 
@@ -13,9 +13,9 @@ function Header() {
             <span className="heading-primary--sub">Technology-driven construction & engineering</span>
           </h1>
           <div className={styles.btn}>
-            <Link to="/">
+            <AnchorLink to="/#contact" title="Contact Form">
               <PrimaryButton>Contact Us</PrimaryButton>
-            </Link>
+            </AnchorLink>
           </div>
           </div>
         </div>

@@ -15,7 +15,7 @@
     width: 32%;
   }
 
-  @include respond(small-tab) {
+  @include respond(tab-port) {
     width: 45rem;
     margin-bottom: 4rem;
   }

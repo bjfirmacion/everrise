@@ -26,12 +26,12 @@ function Footer() {
         <div className={styles.socialLinks}>
           <ul className={styles.list}>
             <li className={`${styles.item} ${styles.itemSocial}`}>
-              <a href="https://www.facebook.com/everriseconstruction" target="_blank">
+              <a href="https://www.facebook.com/everriseconstruction" target="_blank" rel="noopener noreferrer">
                 <FacebookIcon className={styles.facebook} iconStyle={iconStyles.largeIcon} />
               </a>
             </li>
             <li className={`${styles.item} ${styles.itemSocial}`}>
-              <a href="https://www.linkedin.com/company/everrise-construction/" target="_blank">
+              <a href="https://www.linkedin.com/company/everrise-construction/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon className={styles.linkedin} />
               </a>
             </li>

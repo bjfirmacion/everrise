@@ -2,6 +2,7 @@
 // IMPORTS
 //==========================
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap");
+@import "../scss/mixins";
 
 //==========================
 // VARIABLES
@@ -49,6 +50,16 @@
 html {
   font-size: 62.5%; // sets 1rem = 10px
   box-sizing: border-box;
+
+  @include respond(big-desktop) {
+    font-size: 75%; // sets 1rem = 12px
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%; // sets 1rem = 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; // sets 1rem = 8px
+  }
 }
 
 //==========================
@@ -72,6 +83,10 @@ body {
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 0.5rem;
+
+    @include respond(small-tab) {
+      font-size: 3.5rem;
+    }
   }
 
   &--sub {
@@ -79,6 +94,10 @@ body {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.6rem;
+
+    @include respond(small-tab) {
+      font-size: 1.5rem;
+    }
   }
 }
 
