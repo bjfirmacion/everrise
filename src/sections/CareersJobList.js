@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import JobListItem from '../components/JobListItem';
 import styles from './CareersJobList.module.scss';
 
 export class CareersJobList extends Component {
@@ -20,37 +21,17 @@ export class CareersJobList extends Component {
             </thead>
 
             <tbody className={styles.tableBody}>
-              <tr>
-                <td className={`${styles.tableItem} ${styles.tableItemTitle}`}>
-                  <a href="#" className={styles.tableItemLink}>
-                    <h3 className="heading-tertiary heading-tertiary--main">Principal Engineer</h3>
-                  </a>
-                </td>
+              <JobListItem
+                title="Principal Engineer"
+                category="Engineering"
+                location="Taguig"
+              />
 
-                <td className={styles.tableItem}>
-                  <a href="#" className={styles.tableItemLink}>Engineering</a>
-                </td>
-
-                <td className={styles.tableItem}>
-                  <a href="#" className={styles.tableItemLink}>Taguig</a>
-                </td>
-              </tr>
-
-              <tr>
-                <td className={`${styles.tableItem} ${styles.tableItemTitle}`}>
-                  <a href="#" className={`${styles.tableItemLink} heading-4`}>
-                    <h3 className="heading-tertiary heading-tertiary--main">Office Manager</h3>
-                  </a>
-                </td>
-
-                <td className={styles.tableItem}>
-                  <a href="#" className={styles.tableItemLink}>Administration</a>
-                </td>
-
-                <td className={styles.tableItem}>
-                  <a href="#" className={styles.tableItemLink}>Taguig</a>
-                </td>
-              </tr>
+              <JobListItem
+                title="Office Manager"
+                category="Administration"
+                location="Taguig"
+              />
             </tbody>
 
           </table>

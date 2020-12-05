@@ -31,32 +31,3 @@
     border-bottom: 1px solid var(--color-grey-light);
   }
 }
-
-.table-item {
-  padding: 4rem 4rem 4rem 0;
-  border-bottom: 1px solid var(--color-grey-light);
-  font-weight: 700;
-  color: var(--color-primary);
-
-  &--title {
-    color: var(--color-black);
-    font-weight: 700;
-  }
-}
-
-.table-item-link:link,
-.table-item-link:visited {
-  transition: color 0.3s;
-  color: inherit;
-  text-decoration: none;
-}
-
-.table-item-link:hover {
-  color: var(--color-primary-dark);
-}
-
-.table-item--title {
-  .table__item-link:hover {
-    color: var(--color-primary);
-  }
-}
