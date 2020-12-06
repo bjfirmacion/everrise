@@ -12,7 +12,7 @@
   color: var(--color-grey-light);
   padding: 1rem;
   transition: all 0.3s;
-  z-index: 100;
+  z-index: 20;
   position: fixed;
 
   @include respond(phone) {
@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   margin-right: 10rem;
+  
 
   @include respond(tab-land) {
     margin-right: 8rem;
@@ -46,6 +47,7 @@
 .logoImg {
   height: 5rem;
   transition: all 0.3s;
+  z-index: 100;
 
   @include respond(tab-land) {
     height: 7rem;
@@ -144,97 +146,96 @@
 
 // COLLAPSED NAVIGATION
 
-@include respond(tab-port) {
-  display: block;
-
-  .logo {
-    margin: 0;
-  }
-
-  .list {
-    position: absolute;
-    width: 50%;
-    margin: 0;
-    padding: 3rem 0;
-    background-color: var(--color-grey-medium);
-    flex-direction: column;
-    max-height: 100vh;
-    text-align: center;
-    // font-size: 2rem;
-    justify-content: flex-start;
-    overflow-y: scroll;
-    transition: all 0.3s;
-
-    @include respond(phone) {
-      width: 100%;
-    }
-
-    .navigation::-webkit-scrollbar {
-      display: none; // Chrome, Safari, Opera
-    }
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-
-    // Hide navigation when checkbox is unchecked
-    top: 0;
-    right: -50%;
-
-    @include respond(phone) {
-      right: -100%;
-    }
-  }
-
-  .sticky .list {
-    top: 100%;
-  }
-
-  // Show navigation when checkbox is checked
-  .checkbox:checked ~ .main-nav .list {
-    top: 0;
-    right: 0;
-  }
-
-  .sticky .checkbox:checked ~ .main-nav .list {
-    top: 100%;
-  }
-
-  .item {
-    width: 100%;
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-  }
-
-  .link {
-    //    margin-top: 20rem;
-  }
-
-  .dropdown {
-    width: 100%;
-    position: relative;
-    margin-top: 0;
-    background-color: rgba(51, 51, 51, 0.6);
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    font-size: 1.5rem;
-    padding: 2rem 4rem;
-    display: none;
-    height: 0;
-    transition: all 0.3s;
-
-    .sub-item {
-      margin-bottom: 1.2rem;
-      padding-top: 1.2rem;
-    }
-  }
-
-  .link:hover + .dropdown,
-  .link:active + .dropdown,
-  .dropdown:hover {
-    opacity: 1;
-    height: auto;
-    visibility: visible;
+.navigation {
+  @include respond(tab-port) {
     display: block;
+
+    .logo {
+      margin: 0;
+    }
+
+    .list {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      padding: 3rem 0;
+      background-color: var(--color-grey-medium);
+      font-size: 3rem;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+      justify-content: space-evenly;
+      overflow-y: hidden;
+      transition: all 0.3s;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      .navigation::-webkit-scrollbar {
+        display: none; // Chrome, Safari, Opera
+      }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      // Hide navigation when checkbox is unchecked
+      top: -100vh;
+      left: 0;
+    }
+
+    .sticky .list {
+      top: -100vh;
+    }
+
+    // Show navigation when checkbox is checked
+    .checkbox:checked ~ .main-nav .list {
+      top: 0;
+      right: 0;
+    }
+
+    .sticky .checkbox:checked ~ .main-nav .list {
+      top: 0;
+    }
+
+    .item {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .link {
+      //    margin-top: 20rem;
+    }
+
+    .dropdown {
+      width: 100%;
+      position: relative;
+      margin-top: 0;
+      background-color: rgba(51, 51, 51, 0.6);
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      font-size: 2rem;
+      padding: 2rem 4rem;
+      // display: none;
+      height: 0;
+      opacity: 0;
+      transition: all 0.3s;
+
+      .sub-item {
+        margin-bottom: 1.2rem;
+        padding-top: 1.2rem;
+      }
+    }
+
+    .link:hover + .dropdown,
+    .link:active + .dropdown,
+    .dropdown:hover {
+      opacity: 1;
+      // height: auto;
+      visibility: visible;
+      display: block;
+    }
   }
 }
 
