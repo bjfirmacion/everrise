@@ -1,0 +1,68 @@
+//==========================
+// JOB LISTING PAGE
+//==========================
+@import "../../../scss/mixins";
+
+.job {
+  // position: absolute;
+  margin-top: 10rem;
+  min-height: 80vh;
+  font-size: 1.8rem;
+}
+
+.header {
+  padding: 2.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.backBtn {
+  margin-right: auto;
+}
+
+.location-icon {
+  margin-right: .5rem;
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.applyBtnDesktop {
+  margin-left: 3rem;
+}
+
+.main-content {
+  padding: 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.job-description {
+  text-align: center;
+}
+
+.job-title {
+  color: var(--color-primary);
+}
+
+.job-category {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-grey-medium);
+  margin-bottom: 2rem;
+}
+
+.ul {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.li:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+.boldText {
+  text-align: initial;
+  font-weight: bold;
+}
+
+

@@ -8,24 +8,29 @@ export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      onTop: true
+      sticky: false
     }
   }
   
   componentDidMount() {
+    if (this.props.navSticky) {
+      this.setState({sticky: true});
+      return;
+    }
+    
     window.addEventListener('scroll', () => {
-      let onTop = false;
+      let sticky = true;
       if (window.scrollY === 0) {
-        onTop = true;
+        sticky = false;
       }
-      this.setState({ onTop: onTop });
+      this.setState({ sticky: sticky });
     });
   }
 
   render() {
-    const {onTop} = this.state;
+    const {sticky} = this.state;
     return (
-      <nav className={`${styles.navigation} ${!onTop ? styles.sticky : ''}`}>
+      <nav className={`${styles.navigation} ${sticky ? styles.sticky : ''}`}>
         <Link to="/" className={styles.logo}>
           <img src={logo} alt="EverRise logo" className={styles.logoImg} />
         </Link>

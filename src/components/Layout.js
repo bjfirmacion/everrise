@@ -3,11 +3,11 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import './Layout.scss';
 
-function Layout({ children }) {
+function Layout(props) {
   return (
     <>
-      <Navbar />
-      {children}
+      <Navbar navSticky={props.navSticky} />
+      {props.children}
       <Footer />
     </>
   )

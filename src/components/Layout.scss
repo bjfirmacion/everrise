@@ -188,3 +188,13 @@ a:link,
 a:visited {
   color: var(--color-primary);
 }
+
+//==========================
+// HORIZONTAL BREAK
+//==========================
+.horizontal-break {
+  width: 100%;
+  color: var(--color-primary-light);
+  opacity: 30%;
+  height: 1px;
+}
