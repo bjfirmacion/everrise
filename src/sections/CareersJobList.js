@@ -15,19 +15,12 @@ export class CareersJobList extends Component {
             <thead className={styles.tableHeaderRow}>
               <tr>
                 <th className={styles.tableHeader}>Job</th>
-                <th className={styles.tableHeader}>Category</th>
+                <th className={`${styles.tableHeader} ${styles.categoryDesktop}`}>Category</th>
                 <th className={styles.tableHeader}>Location</th>
               </tr>
             </thead>
 
             <tbody className={styles.tableBody}>
-              <JobListItem
-                title="Principal Engineer"
-                category="Engineering"
-                location="Taguig"
-                link="#"
-              />
-
               <JobListItem
                 title="Safety Officer"
                 category="Operations"

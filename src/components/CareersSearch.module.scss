@@ -15,6 +15,10 @@
   justify-content: center;
   margin-bottom: 2rem;
 
+  @include respond(small-tab) {
+    flex-direction: column;
+  }
+
   input,
   select {
     font-size: var(--default-font-size);
@@ -38,6 +42,11 @@
   flex: 3 1 auto;
   margin-right: 2rem;
 
+  @include respond(small-tab) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
   &::placeholder {
     color: var(--color-white);
   }
@@ -45,4 +54,8 @@
 
 .category-dropdown {
   flex: 1 1 auto;
+
+  @include respond(small-tab) {
+    margin-bottom: 2rem;
+  }
 }

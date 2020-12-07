@@ -19,6 +19,10 @@
   margin: 0 auto;
   text-align: left;
   border-collapse: collapse;
+
+  @include respond(small-tab) {
+    width: 100%
+  }
 }
 
 .table-header {
@@ -29,5 +33,11 @@
 .table-body {
   & tr {
     border-bottom: 1px solid var(--color-grey-light);
+  }
+}
+
+.category-desktop {
+  @include respond(phone) {
+    display: none;
   }
 }
