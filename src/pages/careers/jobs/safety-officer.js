@@ -6,6 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../../../components/Layout';
 import PrimaryButton from '../../../components/PrimaryButton';
 import SecondaryButton from '../../../components/SecondaryButton';
+import JobApplication from '../../../components/JobApplication';
 import styles from './job.module.scss';
 
 function SafetyOfficer() {
@@ -21,16 +22,19 @@ function SafetyOfficer() {
               <FontAwesomeIcon className={styles.locationIcon} icon={faMapMarkerAlt}></FontAwesomeIcon>
               Floridablanca, Pampanga
             </span>
-            <AnchorLink to="./#form" className={styles.applyBtnDesktop}>
+            <AnchorLink to="./#apply" className={styles.applyBtnDesktop}>
               <PrimaryButton>Apply</PrimaryButton>
             </AnchorLink>
           </header>
-          <hr className="horizontal-break" />
+          <hr className={styles.horizontalBreak} />
+          <AnchorLink to="./#apply" className={styles.applyBtnMobile}>
+            <PrimaryButton>Apply</PrimaryButton>
+          </AnchorLink>
           <main className={styles.mainContent}>
             <section className={styles.jobDescription}>
-              <h2 className={`heading-secondary heading-secondary--main ${styles.jobTitle}`}>
+              <h3 className={`heading-tertiary ${styles.jobTitle}`}>
                 Safety Officer
-              </h2>
+              </h3>
               <p className={styles.jobCategory}>Operations - Full-Time</p>
               <div className={styles.jobDescriptionText}>
                 <ul className={styles.ul}>
@@ -73,8 +77,13 @@ function SafetyOfficer() {
               </div>
             </section>
           </main>
-          <hr className="horizontal-break" />
-
+          <hr className={styles.horizontalBreak} />
+          <section className={styles.applicationForm} id="apply">
+            <h2 className={`heading-secondary heading-secondary--main ${styles.formHeading}`}>
+              Apply for this Job
+            </h2>
+            <JobApplication />
+          </section>
         </div>
       </div>
     </Layout>

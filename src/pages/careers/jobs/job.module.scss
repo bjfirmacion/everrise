@@ -2,6 +2,7 @@
 // JOB LISTING PAGE
 //==========================
 @import "../../../scss/mixins";
+@import "../../../scss/form";
 
 .job {
   // position: absolute;
@@ -14,10 +15,18 @@
   padding: 2.5rem 0;
   display: flex;
   align-items: center;
+
+  @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 }
 
 .backBtn {
   margin-right: auto;
+  @include respond(phone) {
+      margin-bottom: 1rem;
+  }
 }
 
 .location-icon {
@@ -28,12 +37,30 @@
 
 .applyBtnDesktop {
   margin-left: 3rem;
+    @include respond(phone) {
+      display: none;
+  }
+}
+
+.applyBtnMobile {
+  display: none;
+  @include respond(phone) {
+      display: block;
+      margin-top: 3rem;
+      &>* {
+        width: 100%;
+      }
+  }
 }
 
 .main-content {
   padding: 5rem;
   max-width: 900px;
   margin: 0 auto;
+
+  @include respond(phone) {
+      padding: 3rem 2rem;
+  }
 }
 
 .job-description {
@@ -42,6 +69,7 @@
 
 .job-title {
   color: var(--color-primary);
+  font-size: 2.6rem;
 }
 
 .job-category {
@@ -65,4 +93,30 @@
   font-weight: bold;
 }
 
+.horizontal-break {
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+  opacity: 30%;
+  height: 1px;
+}
 
+//==========================
+// JOB APPLICATION SECTION
+//==========================
+.application-form {
+  padding: 5rem;
+  text-align: center;
+  background-color: var(--color-grey-light);
+  margin-bottom: 4rem;
+
+  @include respond(phone) {
+      padding: 3rem 2rem;
+  }
+};
+
+.form-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: initial;
+}

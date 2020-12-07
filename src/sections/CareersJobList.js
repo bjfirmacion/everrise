@@ -25,12 +25,14 @@ export class CareersJobList extends Component {
                 title="Principal Engineer"
                 category="Engineering"
                 location="Taguig"
+                link="#"
               />
 
               <JobListItem
-                title="Office Manager"
-                category="Administration"
-                location="Taguig"
+                title="Safety Officer"
+                category="Operations"
+                location="Floridablanca"
+                linkTo="safety-officer"
               />
             </tbody>
 

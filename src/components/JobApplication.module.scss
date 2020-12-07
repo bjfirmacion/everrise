@@ -1,0 +1,46 @@
+//==========================
+// JOB APPLICATION FORM
+//==========================
+@import "../scss/mixins";
+@import "../scss/form";
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 6rem auto 0 auto;
+  text-align: initial;
+}
+
+.group {
+  text-align: center;
+  display: inline-block;
+
+  &.half {
+    width: 49%;
+
+    @include respond(small-tab) {
+      width: 100%;
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.input {
+  width: 100%;
+  display: inline;
+
+  &--textarea {
+    height: 15rem;
+    width: 100%;
+  }
+}
+
+.submit {
+  width: 100%;
+  text-align: center;
+}

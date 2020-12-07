@@ -62,7 +62,8 @@
 
 .main-nav {
   display: flex;
-  flex: 1;
+  justify-self: flex-end;
+  width: 70%;
 }
 
 .list {
