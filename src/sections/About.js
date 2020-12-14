@@ -8,7 +8,7 @@ const getImages = graphql`
  {
   img1: file(relativePath: {eq: "about.png"}) {
     childImageSharp {
-      fluid {
+      fluid(quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }

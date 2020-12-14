@@ -4,19 +4,10 @@
 
 //****** PARALLAX SECTION DIVIDERS ******
 .parallax {
-    background-size: cover;
+  height: 75vh;  
+  background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
     overflow: hidden;
-
-    &--A {
-        height: 75vh;
-        background-image: url(../images/parallax-img-medium.jpg);
-    }
-
-    &--B {
-        height: 75vh;
-        background-image: url(../images/parallax-img2-medium.jpg);
-    }
 }

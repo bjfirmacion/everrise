@@ -1,13 +1,16 @@
 import React from "react";
-import {Link} from 'gatsby';
+import {Link, graphql, useStaticQuery} from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import Layout from '../components/Layout';
 import TextButton from '../components/TextButton';
 import styles from './maintenance.module.scss';
 
 export default function Maintenance() {
+  const data = useStaticQuery(getImages);
+
   return (
     <Layout>
-      <section className={styles.maintenance}>
+      <BackgroundImage Tag="section" fluid={data.file.childImageSharp.fluid} className={styles.maintenance}>
         <div className={`container`}>
           <div className={styles.textbox}>
 
@@ -20,7 +23,19 @@ export default function Maintenance() {
             </Link>
           </div>
         </div>
-      </section>
+      </BackgroundImage>
     </Layout>
   )
 }
+
+const getImages = graphql`
+  {
+  file(relativePath: {eq: "maintenance-medium.jpg"}) {
+    childImageSharp {
+      fluid(quality: 100) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`
