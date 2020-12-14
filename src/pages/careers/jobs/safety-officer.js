@@ -22,7 +22,7 @@ function SafetyOfficer() {
               <FontAwesomeIcon className={styles.locationIcon} icon={faMapMarkerAlt}></FontAwesomeIcon>
               Floridablanca, Pampanga
             </span>
-            <AnchorLink to="./#apply" className={styles.applyBtnDesktop}>
+            <AnchorLink to="#apply" className={styles.applyBtnDesktop}>
               <PrimaryButton>Apply</PrimaryButton>
             </AnchorLink>
           </header>

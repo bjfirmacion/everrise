@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, graphql, useStaticQuery} from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Layout from '../components/Layout';
 import TextButton from '../components/TextButton';
@@ -10,7 +10,11 @@ export default function Maintenance() {
 
   return (
     <Layout>
-      <BackgroundImage Tag="section" fluid={data.file.childImageSharp.fluid} className={styles.maintenance}>
+      <BackgroundImage
+        Tag="section"
+        fluid={data.file.childImageSharp.fluid}
+        className={styles.maintenance}
+      >
         <div className={`container`}>
           <div className={styles.textbox}>
 

@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        duration: 700 
+        duration: 1000 
       }
     },
     `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
