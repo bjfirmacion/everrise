@@ -1,13 +1,39 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import Image from 'gatsby-image';
 import PrimaryButton from '../components/PrimaryButton';
 import styles from './Work.module.scss';
-import img1 from '../images/work-img-1-small.jpg';
-import img2 from '../images/work-img-2-small.jpg';
-import img3 from '../images/work-img-3-small.jpg';
+
+const getImages = graphql`
+{
+  workImg1:file(relativePath: {eq: "work-img-1-small.jpg"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+    workImg2:file(relativePath: {eq: "work-img-2-small.jpg"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+    workImg3:file(relativePath: {eq: "work-img-3-small.jpg"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`
 
 function Work() {
+  const data = useStaticQuery(getImages);
+
   return (
     <section className={styles.work} id="work">
       <div className="container">
@@ -20,17 +46,17 @@ function Work() {
       <div className={styles.grid}>
 
         <div className={styles.tile}>
-          <img className={styles.img} src={img1} alt="shopping mall" />
+          <Image className={styles.img} fluid={data.workImg1.childImageSharp.fluid} alt="shopping mall" />
           <Link className={styles.link} to="/maintenance">Commercial</Link>
         </div>
 
         <div className={styles.tile}>
-          <img className={styles.img} src={img2} alt="university building" />
+          <Image className={styles.img} fluid={data.workImg2.childImageSharp.fluid} alt="university building" />
           <Link className={styles.link} to="/maintenance">Education</Link>
         </div>
 
         <div className={styles.tile}>
-          <img className={styles.img} src={img3} alt="house" />
+          <Image className={styles.img} fluid={data.workImg3.childImageSharp.fluid} alt="residential house" />
           <Link className={styles.link} to="/maintenance">Residential</Link>
         </div>
 

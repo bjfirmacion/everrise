@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Image from 'gatsby-image';
+// import Image from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TextButton from './TextButton';
 import styles from './ProductCard.module.scss';
