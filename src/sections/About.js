@@ -1,10 +1,23 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import TextButton from '../components/TextButton';
 import styles from './About.module.scss';
-import aboutImg from './img/about.png';
+
+const getImages = graphql`
+ {
+  img1: file(relativePath: {eq: "about.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`
 
 function About() {
+  const data = useStaticQuery(getImages);
   return (
     <section className={styles.section} id="about">
       <div className={`container`}>
@@ -27,7 +40,11 @@ function About() {
             </Link>
           </div>
           <div className={styles.imgContainer}>
-            <img src={aboutImg} alt="construction site" className={styles.img} />
+            <Image
+              alt="construction site"
+              className={styles.img}
+              fluid={data.img1.childImageSharp.fluid}
+            />
           </div>
         </div>
       </div>
@@ -35,4 +52,4 @@ function About() {
   )
 }
 
-export default About;
+export default About

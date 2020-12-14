@@ -1,5 +1,5 @@
 import React from 'react';
-import CareersSearch from '../components/CareersSearch';
+// import CareersSearch from '../components/CareersSearch';
 import styles from './CareersHeader.module.scss';
 
 function CareersHeader() {
@@ -10,7 +10,7 @@ function CareersHeader() {
           Join Our Team
           </h1>
       </div>
-      <CareersSearch />
+      {/* <CareersSearch /> */}
     </header>
   )
 }

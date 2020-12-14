@@ -1,14 +1,44 @@
 import React from 'react';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import { graphql, useStaticQuery } from 'gatsby';
 import ProductCard from '../components/ProductCard';
 import PrimaryButton from '../components/PrimaryButton';
 import styles from './Products.module.scss';
-import img1 from './img/card-img-1.jpg';
-import img2 from './img/card-img-2.jpg';
-import img3 from './img/card-img-3.jpg';
+import img1 from '../images/card-img-1.jpg';
+import img2 from '../images/card-img-2.jpg';
+import img3 from '../images/card-img-3.jpg';
 import { faTools, faBuilding, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 
+
+// const getImages = graphql`
+// {
+//   cardImg1:file(relativePath: {eq: "card-img-1.jpg"}) {
+//     childImageSharp {
+//       fluid {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+//     cardImg2:file(relativePath: {eq: "card-img-2.jpg"}) {
+//     childImageSharp {
+//       fluid {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+//     cardImg3:file(relativePath: {eq: "card-img-3.jpg"}) {
+//     childImageSharp {
+//       fluid {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// }
+// `
+
 function Products() {
+  // const data = useStaticQuery(getImages);
+
   return (
     <section className={styles.products} id="products">
       <div className="container">

@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import PrimaryButton from '../components/PrimaryButton';
 import styles from './Work.module.scss';
-import img1 from './img/work-img-1-small.jpg';
-import img2 from './img/work-img-2-small.jpg';
-import img3 from './img/work-img-3-small.jpg';
+import img1 from '../images/work-img-1-small.jpg';
+import img2 from '../images/work-img-2-small.jpg';
+import img3 from '../images/work-img-3-small.jpg';
 
 function Work() {
   return (

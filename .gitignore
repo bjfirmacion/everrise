@@ -70,3 +70,6 @@ yarn-error.log
 
 # Client reference files
 references/
+
+# VS Code workspace
+workspace.code-workspace

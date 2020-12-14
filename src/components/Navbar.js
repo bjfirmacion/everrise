@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import styles from './Navbar.module.scss';
-import logo from './img/logo-white-small.png';
+import logo from '../images/logo-white-small.png';
 
 export default class Navbar extends Component {
   constructor(props) {
