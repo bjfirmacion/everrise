@@ -33,7 +33,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: process.env.DEPLOY_URL
+          ? "https://ever-rise-backend.herokuapp.com"
+          : "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         contentTypes: [`job`],
         //If using single types place them in this array.
