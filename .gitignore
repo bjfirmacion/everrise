@@ -73,3 +73,6 @@ references/
 
 # VS Code workspace
 workspace.code-workspace
+
+# Strapi Directory
+everrise-strapi-backend/

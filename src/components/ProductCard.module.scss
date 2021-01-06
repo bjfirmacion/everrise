@@ -75,8 +75,8 @@
 }
 
 .body {
-  height: 27.5rem;
-  padding: 3rem;
+  min-height: 27.5rem;
+  padding: 2rem;
 
   @include respond(small-tab) {
     height: auto;

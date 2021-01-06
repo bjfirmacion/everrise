@@ -9,7 +9,7 @@ const getImages = graphql`
   {
   file(relativePath: {eq: "hero-cropped.jpg"}) {
     childImageSharp {
-      fluid(quality: 100) {
+      fluid(quality: 100, maxWidth: 2000) {
         ...GatsbyImageSharpFluid
       }
     }

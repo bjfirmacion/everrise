@@ -29,14 +29,14 @@ const getImages = graphql`
 {
   parallax1: file(relativePath: {eq: "parallax-img-medium.jpg"}) {
     childImageSharp {
-      fluid(quality: 100) {
+      fluid(quality: 100, maxWidth: 2000) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   parallax2: file(relativePath: {eq: "parallax-img2-medium.jpg"}) {
     childImageSharp {
-      fluid(quality: 100) {
+      fluid(quality: 100, maxWidth: 2000) {
         ...GatsbyImageSharpFluid
       }
     }

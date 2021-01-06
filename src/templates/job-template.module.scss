@@ -1,0 +1,124 @@
+//==========================
+// JOB LISTING PAGE
+//==========================
+@import "../scss/mixins";
+@import "../scss/form";
+
+.job {
+  margin-top: 10rem;
+  min-height: 80vh;
+  font-size: 1.8rem;
+}
+
+.header {
+  padding: 2.5rem 0;
+  display: flex;
+  align-items: center;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.backBtn {
+  margin-right: auto;
+  @include respond(phone) {
+    margin-bottom: 1rem;
+  }
+}
+
+.location-icon {
+  margin-right: 0.5rem;
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.applyBtnDesktop {
+  margin-left: 3rem;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.applyBtnMobile {
+  display: none;
+  @include respond(phone) {
+    display: block;
+    margin-top: 3rem;
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.main-content {
+  padding: 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    padding: 3rem 2rem;
+  }
+}
+
+.job-heading {
+  text-align: center;
+
+  .job-title {
+    color: var(--color-primary);
+    font-size: 2.6rem;
+  }
+
+  .job-category {
+    font-style: italic;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--color-grey-medium);
+    margin-bottom: 2rem;
+  }
+}
+
+.job-description {
+  text-align: justify;
+
+  li {
+    margin-bottom: 1rem;
+  }
+  ul {
+    margin-bottom: 3rem;
+    list-style-type: square;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.horizontal-break {
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+  opacity: 30%;
+  height: 1px;
+}
+
+//==========================
+// JOB APPLICATION SECTION
+//==========================
+.application-form {
+  padding: 5rem;
+  text-align: center;
+  background-color: var(--color-grey-light);
+  margin-bottom: 4rem;
+
+  @include respond(phone) {
+    padding: 3rem 2rem;
+  }
+}
+
+.form-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: initial;
+}

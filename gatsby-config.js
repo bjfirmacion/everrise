@@ -15,12 +15,34 @@ module.exports = {
         duration: 1000 
       }
     },
-    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, 
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: `static/favicon.ico`
+      }
+    },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`job`],
+        //If using single types place them in this array.
+        // singleTypes: [`home-page`, `contact`],
+        // Possibility to login with a strapi user, when content types are not publically available (optional).
+        // loginData: {
+        //   identifier: "",
+        //   password: "",
+        // },
       },
     },
   ],

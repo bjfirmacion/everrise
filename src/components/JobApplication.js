@@ -47,7 +47,7 @@ export class JobApplication extends Component {
             type="text"
             className={styles.input}
             placeholder="Last Name"
-            id="firstName" name="lastName"
+            id="lastName" name="lastName"
             value={lastName}
             required
             onChange={this.handleChange}
