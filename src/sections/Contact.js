@@ -34,7 +34,7 @@ export default class Contact extends Component {
               <hr className="horizontal-break" />
             </h2>
           </div>
-          <form method="POST" className={styles.form} onSubmit={this.handleSubmit}>
+          <form method="POST" className={styles.form} onSubmit={this.handleSubmit} name="contact" netlify>
             <div className={styles.group}>
               <input
                 type="text"

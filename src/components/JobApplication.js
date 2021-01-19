@@ -1,34 +1,77 @@
+import { navigate } from 'gatsby';
 import React, { Component } from 'react';
 import styles from './JobApplication.module.scss';
 import PrimaryButton from './PrimaryButton';
+
+function encode(data) {
+  const formData = new FormData();
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key]);
+  }
+  return formData;
+}
 
 export class JobApplication extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      jobId: this.props.job.id,
+      jobTitle: this.props.job.id,
+      jobCategory: this.props.job.category,
+      jobLocation: this.props.job.location,
       firstName: '',
       lastName: '',
       email: '',
       phone: '',
       city: '',
-      resume: '',
+      // attachment: '',
       message: ''
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleAttachment = this.handleAttachment.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(evt) {
     this.setState({ [evt.target.name]: evt.target.value });
   }
 
+  handleAttachment(evt) {
+    this.setState({ [evt.target.name]: evt.target.files[0] });
+  }
+
   handleSubmit(evt) {
     evt.preventDefault();
+    const form = evt.target;
+    fetch('/', {
+      method: 'POST',
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state
+      })
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => {
+        console.log(error);
+        navigate('/error');
+      })
   }
 
   render() {
-    const { firstName, lastName, email, phone, city, resume, message } = this.state;
+    const { firstName, lastName, email, phone, city, message } = this.state;
     return (
-      <form id="form" method="POST" className={styles.form} onSubmit={this.handleSubmit}>
+      <form
+        id="form"
+        method="POST"
+        className={styles.form}
+        onSubmit={this.handleSubmit}
+        name="job-application"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/careers/success"
+      >
+        <input type="hidden" name="bot-field" /> {/* required for Netlify forms */}
+        <input type="hidden" name="form-name" value="job-application" /> {/* required for Netlify forms */}
         <div className={`${styles.group} ${styles.half}`}>
           <input
             type="text"
@@ -99,12 +142,11 @@ export class JobApplication extends Component {
             type="file"
             className={styles.input}
             placeholder="Resume or CV"
-            id="resume" name="resume"
-            value={resume}
+            id="attacment" name="attachment"
             required
-            onChange={this.handleChange}
+            onChange={this.handleAttachment}
           />
-          <label htmlFor="resume" className={styles.label}>Resume or CV</label>
+          <label htmlFor="attachment" className={styles.label}>Resume or CV</label>
         </div>
 
         <div className={`${styles.group} ${styles.full}`}>

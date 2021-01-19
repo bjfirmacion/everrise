@@ -49,7 +49,7 @@ function jobTemplate(props) {
             <h2 className={`heading-secondary heading-secondary--main ${styles.formHeading}`}>
               Apply for this Job
             </h2>
-            <JobApplication />
+            <JobApplication job={job}/>
           </section>
         </div>
       </div>
@@ -60,6 +60,7 @@ function jobTemplate(props) {
 export const query = graphql`
 query GetSingleJob($slug: String) {
   job: strapiJob(slug: {eq: $slug}) {
+    id
     title
     family
     category
