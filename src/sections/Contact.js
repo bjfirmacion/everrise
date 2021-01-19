@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PrimaryButton from '../components/PrimaryButton';
 import styles from './Contact.module.scss';
+import { handleChange, handleSubmit } from '../helpers/formHelpers';
 
 export default class Contact extends Component {
   constructor(props) {
@@ -11,15 +12,8 @@ export default class Contact extends Component {
       phone: '',
       message: ''
     }
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(evt) {
-    this.setState({ [evt.target.name]: evt.target.value });
-  }
-
-  handleSubmit(evt) {
-    evt.preventDefault();
+    this.handleChange = handleChange.bind(this);
+    this.handleSubmit = handleSubmit.bind(this);
   }
 
   render() {
@@ -34,7 +28,17 @@ export default class Contact extends Component {
               <hr className="horizontal-break" />
             </h2>
           </div>
-          <form method="POST" className={styles.form} onSubmit={this.handleSubmit} name="contact" netlify>
+          <form
+            method="POST"
+            className={styles.form}
+            onSubmit={this.handleSubmit}
+            name="contact"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/success"
+          >
+            <input type="hidden" name="bot-field" /> {/* required for Netlify forms */}
+            <input type="hidden" name="form-name" value="contact" /> {/* required for Netlify forms */}
             <div className={styles.group}>
               <input
                 type="text"
@@ -64,7 +68,7 @@ export default class Contact extends Component {
 
             <div className={styles.group}>
               <input
-                type="number"
+                type="text"
                 className={styles.input}
                 placeholder="Phone number (optional)"
                 id="phone"

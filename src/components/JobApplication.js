@@ -1,15 +1,7 @@
-import { navigate } from 'gatsby';
 import React, { Component } from 'react';
 import styles from './JobApplication.module.scss';
 import PrimaryButton from './PrimaryButton';
-
-function encode(data) {
-  const formData = new FormData();
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
-  }
-  return formData;
-}
+import {handleChange, handleAttachment, handleSubmit} from '../helpers/formHelpers';
 
 export class JobApplication extends Component {
   constructor(props) {
@@ -23,9 +15,9 @@ export class JobApplication extends Component {
       city: '',
       message: ''
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleAttachment = this.handleAttachment.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = handleChange.bind(this);
+    this.handleAttachment = handleAttachment.bind(this);
+    this.handleSubmit = handleSubmit.bind(this);
   }
 
   //Initializing state on component mount to include job data
@@ -37,31 +29,6 @@ export class JobApplication extends Component {
       jobLocation: this.props.job.location,
       ...this.state
     })
-  }
-
-  handleChange(evt) {
-    this.setState({ [evt.target.name]: evt.target.value });
-  }
-
-  handleAttachment(evt) {
-    this.setState({ [evt.target.name]: evt.target.files[0] });
-  }
-
-  handleSubmit(evt) {
-    evt.preventDefault();
-    const form = evt.target;
-    fetch('/', {
-      method: 'POST',
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state
-      })
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => {
-        console.log(error);
-        navigate('/error');
-      })
   }
 
   render() {
@@ -82,9 +49,9 @@ export class JobApplication extends Component {
         <input type="hidden" name="form-name" value="job-application" /> {/* required for Netlify forms */}
 
         {/* add job data from props/state to the form  */}
-        <input type="hidden" name="jobId" value={jobId} /> 
-        <input type="hidden" name="jobTitle" value={jobTitle} /> 
-        <input type="hidden" name="jobCategory" value={jobCategory} /> 
+        <input type="hidden" name="jobId" value={jobId} />
+        <input type="hidden" name="jobTitle" value={jobTitle} />
+        <input type="hidden" name="jobCategory" value={jobCategory} />
         <input type="hidden" name="jobLocation" value={jobLocation} />
 
         <div className={`${styles.group} ${styles.half}`}>

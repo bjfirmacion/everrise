@@ -1,0 +1,21 @@
+//==========================
+// SUCCESS PAGE
+//==========================
+@import "../scss/mixins";
+
+.success {
+  margin-top: 10rem;
+  min-height: 75vh;
+}
+
+.textbox {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+  color: var(--color-grey-dark);
+  max-width: 50%;
+
+    @include respond(tab-port) {
+    max-width: 80%;
+  }
+}
