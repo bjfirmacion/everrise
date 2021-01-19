@@ -28,6 +28,7 @@ export class JobApplication extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  //Initializing state on component mount to include job data
   componentDidMount() {
     this.setState({
       jobId: this.props.job.id,
@@ -64,7 +65,7 @@ export class JobApplication extends Component {
   }
 
   render() {
-    const { firstName, lastName, email, phone, city, message } = this.state;
+    const { firstName, lastName, email, phone, city, message, jobId, jobTitle, jobCategory, jobLocation } = this.state;
     return (
       <form
         id="form"
@@ -78,6 +79,13 @@ export class JobApplication extends Component {
       >
         <input type="hidden" name="bot-field" /> {/* required for Netlify forms */}
         <input type="hidden" name="form-name" value="job-application" /> {/* required for Netlify forms */}
+
+        {/* add job data from props/state to the form  */}
+        <input type="hidden" name="jobId" value={jobId} /> 
+        <input type="hidden" name="jobTitle" value={jobTitle} /> 
+        <input type="hidden" name="jobCategory" value={jobCategory} /> 
+        <input type="hidden" name="jobLocation" value={jobLocation} />
+        
         <div className={`${styles.group} ${styles.half}`}>
           <input
             type="text"
