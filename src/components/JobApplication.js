@@ -13,23 +13,29 @@ function encode(data) {
 
 export class JobApplication extends Component {
   constructor(props) {
+    console.log(props)
     super(props);
     this.state = {
-      jobId: this.props.job.id,
-      jobTitle: this.props.job.title,
-      jobCategory: this.props.job.category,
-      jobLocation: this.props.job.location,
       firstName: '',
       lastName: '',
       email: '',
       phone: '',
       city: '',
-      // attachment: '',
       message: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleAttachment = this.handleAttachment.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      jobId: this.props.job.id,
+      jobTitle: this.props.job.title,
+      jobCategory: this.props.job.category,
+      jobLocation: this.props.job.location,
+      ...this.state
+    })
   }
 
   handleChange(evt) {
