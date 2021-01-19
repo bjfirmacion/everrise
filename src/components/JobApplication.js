@@ -16,7 +16,7 @@ export class JobApplication extends Component {
     super(props);
     this.state = {
       jobId: this.props.job.id,
-      jobTitle: this.props.job.Title,
+      jobTitle: this.props.job.title,
       jobCategory: this.props.job.category,
       jobLocation: this.props.job.location,
       firstName: '',
