@@ -76,6 +76,7 @@ export class JobApplication extends Component {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         action="/careers/success"
+        subject={`Job Application for ${jobTitle} (${jobLocation}) received from ${firstName} ${lastName}`}
       >
         <input type="hidden" name="bot-field" /> {/* required for Netlify forms */}
         <input type="hidden" name="form-name" value="job-application" /> {/* required for Netlify forms */}
@@ -85,7 +86,7 @@ export class JobApplication extends Component {
         <input type="hidden" name="jobTitle" value={jobTitle} /> 
         <input type="hidden" name="jobCategory" value={jobCategory} /> 
         <input type="hidden" name="jobLocation" value={jobLocation} />
-        
+
         <div className={`${styles.group} ${styles.half}`}>
           <input
             type="text"

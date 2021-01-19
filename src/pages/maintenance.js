@@ -21,7 +21,7 @@ export default function Maintenance() {
             <h1 className={`heading-primary`}>
               <span className={`heading-primary--main`}><i className={`fas fa-tools`}></i> This page is under construction</span>
             </h1>
-            <p className={`paragraph ${styles.text}`}>We are currently building the content for this page. Please check back at a later time.</p>
+            <p className={`paragraph`}>We are currently building the content for this page. Please check back at a later time.</p>
             <Link to="/">
               <TextButton>Return to home page &rarr;</TextButton>
             </Link>
