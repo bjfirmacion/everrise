@@ -14,7 +14,7 @@ function jobTemplate(props) {
   const { data: { job } } = props;
 
   return (
-    <Layout navSticky={true}>
+    <Layout darkNav>
       <div className={styles.job}>
         <div className="container">
           <header className={styles.header}>
@@ -25,7 +25,7 @@ function jobTemplate(props) {
               <FontAwesomeIcon className={styles.locationIcon} icon={faMapMarkerAlt}></FontAwesomeIcon>
               {job.location}
             </span>
-            <AnchorLink to="#apply" className={styles.applyBtnDesktop}>
+            <AnchorLink to="./#apply" className={styles.applyBtnDesktop}>
               <PrimaryButton>Apply</PrimaryButton>
             </AnchorLink>
           </header>

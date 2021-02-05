@@ -13,7 +13,7 @@ export default function Home() {
   const data = useStaticQuery(getImages);
 
   return (
-    <Layout>
+    <Layout >
       <Header />
       <About />
       <BackgroundImage fluid={data.parallax1.childImageSharp.fluid} className={`${styles.parallax}`} />
