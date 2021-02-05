@@ -29,18 +29,16 @@ const data = [
   }
 ];
 
-const links = data.map(link => {
-  return (
-    <li key={link.id}>
-      <AnchorLink to={link.url}>{link.text}</AnchorLink>
-    </li>
-  )
-});
-
-export default () => {
+export default ({ toggleSidebar }) => {
   return (
     <ul>
-      {links}
+      {data.map(link => {
+        return (
+          <li key={link.id} onClick={toggleSidebar}>
+            <AnchorLink to={link.url}>{link.text}</AnchorLink>
+          </li>
+        )
+      })}
     </ul>
   )
 }

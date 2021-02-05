@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from './Navbar2.module.scss';
+import styles from './Navbar.module.scss';
 import logo from '../images/logo-white-small.png';
 import NavLinks from '../constants/navLinks';
 
 export default function Navbar(props) {
-  const [isDark, setIsDark] = React.useState(props.darkNav);
+  const { darkNav, showSidebar, toggleSidebar } = props;
+  const [isDark, setIsDark] = React.useState(darkNav);
 
   window.addEventListener('scroll', () => {
     let dark = true;
@@ -22,6 +23,9 @@ export default function Navbar(props) {
       </Link>
       <div className={styles.mainNav}>
         <NavLinks />
+      </div>
+      <div className={styles.toggleBtn} onClick={toggleSidebar}>
+        <span className={`${styles.toggleIcon} ${showSidebar ? styles.closeBtn : ''}`}>&nbsp;</span>
       </div>
     </nav>
   )
