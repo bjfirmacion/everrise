@@ -8,13 +8,15 @@ export default function Navbar(props) {
   const { darkNav, showSidebar, toggleSidebar } = props;
   const [isDark, setIsDark] = React.useState(darkNav);
 
-  window.addEventListener('scroll', () => {
-    let dark = true;
-    if (window.scrollY === 0) {
-      dark = props.darkNav;
-    }
-    setIsDark(dark);
-  });
+  React.useEffect(() => {
+    window.addEventListener('scroll', () => {
+      let dark = true;
+      if (window.scrollY === 0) {
+        dark = props.darkNav;
+      }
+      setIsDark(dark);
+    });
+  }, [])
 
   return (
     <nav className={`${styles.navigation} ${isDark ? styles.dark : ''}`}>
