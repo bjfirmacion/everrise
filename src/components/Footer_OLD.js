@@ -1,5 +1,4 @@
 import React from 'react';
-import NavLinks from '../constants/navLinks';
 import styles from './Footer.module.scss';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -9,14 +8,13 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.nav}>
-          <NavLinks />
-          {/* <ul className={styles.list}>
+          <ul className={styles.list}>
             <li className={styles.item}><a href="#about" className={styles.link}>About</a></li>
             <li className={styles.item}><a href="#products" className={styles.link}>Products & services</a></li>
             <li className={styles.item}><a href="#work" className={styles.link}>Our work</a></li>
             <li className={styles.item}><a href="/maintenance" className={styles.link}>News & insights</a></li>
             <li className={styles.item}><a href="/maintenance" className={styles.link}>Careers</a></li>
-          </ul> */}
+          </ul>
         </div>
         <div className={styles.socialLinks}>
           <ul className={styles.list}>

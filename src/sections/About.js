@@ -35,9 +35,9 @@ function About() {
               engineering, procurement and construction solutions for clients who want to build the future
               today.
                 </p>
-            <Link to="/maintenance">
+            {/* <Link to="/maintenance">
               <TextButton>About EverRise &rarr;</TextButton>
-            </Link>
+            </Link> */}
           </div>
           <div className={styles.imgContainer}>
             <Image

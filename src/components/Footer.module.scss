@@ -20,74 +20,78 @@
     text-transform: capitalize;
     color: var(--color-grey-light);
   }
-}
 
-.container {
-  display: flex;
-  justify-content: space-between;
+  & ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 
-  @include respond(phone) {
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
+    @include respond(phone) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
+    & li {
+      display: inline-block;
 
-  @include respond(phone) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
 
-.item {
-  display: inline-block;
-
-  &:not(:last-of-type) {
-    margin-right: 2rem;
-  }
-
-  &--social:not(:last-of-type) {
-    margin-right: 4rem;
-  }
-}
-
-.nav {
-  a:hover,
-  a:active {
-    color: var(--color-primary);
-  }
-}
-
-.social-links {
-  @include respond(phone) {
-    margin-top: 1.5rem;
-  }
-
-  .facebook {
-    font-size: 2rem;
-    &:hover {
-      color: var(--color-icon-facebook);
+      &--social:not(:last-of-type) {
+        margin-right: 4rem;
+      }
     }
   }
 
-  .linkedin {
-    font-size: 2rem;
-    &:hover {
-      color: var(--color-icon-facebook);
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
-}
 
-.copyright {
-  margin-top: 3rem;
+  .nav {
+    a:hover,
+    a:active {
+      color: var(--color-primary);
+    }
+  }
 
-  @include respond(phone) {
-    margin-top: 2rem;
-    text-align: center;
+  .social-links {
+    @include respond(phone) {
+      margin-top: 1.5rem;
+    }
+
+    .facebook {
+      font-size: 2rem;
+      &:hover {
+        color: var(--color-icon-facebook);
+      }
+    }
+
+    .linkedin {
+      font-size: 2rem;
+      &:hover {
+        color: var(--color-icon-facebook);
+      }
+    }
+
+    & ul li:hover {
+      border-bottom: none;
+    }
+  }
+
+  .copyright {
+    margin-top: 3rem;
+
+    @include respond(phone) {
+      margin-top: 2rem;
+      text-align: center;
+    }
   }
 }

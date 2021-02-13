@@ -22,9 +22,9 @@ function ProductCard(props) {
       <div className={styles.body}>
         <h4 className="heading-4">{subheading}</h4>
         <p className="paragraph">{text}</p>
-        <Link to={link} className="btn-text">
+        {/* <Link to={link} className="btn-text">
           <TextButton>Learn more &rarr;</TextButton>
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

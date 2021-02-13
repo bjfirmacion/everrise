@@ -16,7 +16,7 @@ export default function Navbar(props) {
       }
       setIsDark(dark);
     });
-  }, [])
+  }, []);
 
   return (
     <nav className={`${styles.navigation} ${isDark ? styles.dark : ''}`}>

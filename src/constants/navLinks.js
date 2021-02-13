@@ -17,11 +17,11 @@ const data = [
     text: 'our work',
     url: '/#work'
   },
-  {
-    id: 4,
-    text: 'news & insights',
-    url: '/maintenance'
-  },
+  // {
+  //   id: 4,
+  //   text: 'news & insights',
+  //   url: '/maintenance'
+  // },
   {
     id: 5,
     text: 'careers',
